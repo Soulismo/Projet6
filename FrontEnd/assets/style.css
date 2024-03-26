@@ -290,3 +290,32 @@ footer nav ul {
 #login-link {
   cursor: pointer;
 }
+
+/*Préparation des filtres*/
+
+#portfolio .container-filtres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: auto; /* Modifiez la hauteur selon vos besoins */
+  margin-bottom: 20px; /* Ajoutez un espacement en bas pour séparer les boutons de la galerie */
+}
+
+#portfolio .container-filtres .buttons-filtres {
+  background-color: #fefef8;
+  padding: 9px 20px;
+  border: 1px solid #1d6154;
+  border-radius: 25px;
+  color: #1d6154;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: Syne;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Ajoutez une transition pour une animation fluide */
+}
+
+#portfolio .container-filtres .buttons-filtres.active {
+  background-color: #1d6154;
+  color: white;
+}

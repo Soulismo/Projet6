@@ -107,6 +107,7 @@ section {
 }
 body {
   line-height: 1;
+  overflow-x: hidden;
 }
 ol,
 ul {
@@ -246,17 +247,17 @@ li:hover {
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
-input[type="submit"] {
+/*input[type="submit"] {
   font-family: "Syne";
   font-weight: 700;
   color: white;
-  background-color: #1d6154;
+  /*background-color: #1d6154;
   margin: 2em auto;
   width: 180px;
   height: 36px;
   text-align: center;
   border-radius: 60px;
-}
+}*/
 
 footer nav ul {
   display: flex;
@@ -363,10 +364,10 @@ footer nav ul {
 }
 
 #portfolio .editBtn {
-  position: absolute;
-  bottom: 25.5em;
+  position: relative;
+  bottom: 3.5em;
   padding: 0;
-  left: 60%;
+  left: 61%;
 }
 
 .topMenu {
@@ -432,7 +433,7 @@ footer nav ul {
 
 .modalGalleryImage {
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .modalWrapper {
   display: flex;
@@ -517,8 +518,12 @@ footer nav ul {
 #addPicture .modalHeader {
   justify-content: space-between;
 }
-#valider {
+.valider {
   background-color: #a7a7a7;
+  width: 37%;
+}
+.validerActive {
+  background-color: #1d6154;
   width: 37%;
 }
 #addPictureForm {

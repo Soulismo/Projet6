@@ -8,25 +8,20 @@ const gallery = document.querySelector(".gallery");
 const body = document.querySelector("body");
 const containerFiltres = document.querySelector(".container-filtres");
 
-const changeSubmitBtnColor = function () {
-  if (
-    document.getElementById("title").value !== "" &&
-    document.getElementById("photo").files[0] !== undefined &&
-    select.options[select.selectedIndex].id !== ""
-  ) {
-    document.querySelector("#valider").style.backgroundColor = "#1D6154";
-  }
-};
 const openModal = function () {
   console.log(".....");
   const modalContainer = document.querySelector(".modalContainer");
   const modal = document.createElement("aside");
   modal.className = "modal";
+  modal.addEventListener("click", closeModal);
 
   const modalWrapper = document.createElement("div");
   modalWrapper.className = "modalWrapper";
   modalWrapper.id = "editGallery";
   modal.appendChild(modalWrapper);
+  modalWrapper.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
   modalContainer.appendChild(modal);
   generateFirstModalContent();
 };
@@ -54,7 +49,7 @@ function sendNewWork() {
   console.log(selectCategory.value);
   const photo = document.querySelector("#photo");
   console.log(photo.files[0]);
-  changeSubmitBtnColor();
+
   if (!title.value || !selectCategory.value || !photo.files[0]) {
     return alert("Tous les champs doivent être remplis");
   } else {
@@ -183,6 +178,27 @@ const generateSecondModalContent = () => {
   imagePreview.alt = "votre image";
   imagePreview.className = "displayNone";
   labelPhotoDiv.appendChild(imagePreview);
+
+  fileInput.required = true;
+  const labelForTitle = document.createElement("label");
+  labelForTitle.setAttribute("for", "title");
+  labelForTitle.textContent = "Titre";
+  const inputTitle = document.createElement("input");
+
+  inputTitle.setAttribute("type", "text");
+  inputTitle.setAttribute("id", "title");
+  inputTitle.setAttribute("name", "title");
+  inputTitle.setAttribute("required", "");
+  const labelCategory = document.createElement("label");
+  labelCategory.setAttribute("for", "selectCategory");
+  labelCategory.textContent = "Catégorie";
+  const selectCategory = document.createElement("select");
+  selectCategory.id = "selectCategory";
+  selectCategory.name = "selectCategory";
+  const submitButton = document.createElement("input");
+  submitButton.type = "submit";
+  submitButton.className = "valider";
+  submitButton.value = "valider";
   fileInput.onchange = (evt) => {
     const [file] = fileInput.files;
     if (file) {
@@ -205,26 +221,24 @@ const generateSecondModalContent = () => {
         paragraph.className = "displayNone";
       }
     }
+    console.log("image");
+    if (selectCategory.value && photo.files[0]) {
+      submitButton.className = "validerActive";
+    }
   };
-  fileInput.required = true;
-  const labelForTitle = document.createElement("label");
-  labelForTitle.setAttribute("for", "title");
-  labelForTitle.textContent = "Titre";
-  const inputTitle = document.createElement("input");
-  inputTitle.setAttribute("type", "text");
-  inputTitle.setAttribute("id", "title");
-  inputTitle.setAttribute("name", "title");
-  inputTitle.setAttribute("required", "");
-  const labelCategory = document.createElement("label");
-  labelCategory.setAttribute("for", "selectCategory");
-  labelCategory.textContent = "Catégorie";
-  const selectCategory = document.createElement("select");
-  selectCategory.id = "selectCategory";
-  selectCategory.name = "selectCategory";
-  const submitButton = document.createElement("input");
-  submitButton.type = "submit";
-  submitButton.id = "valider";
-  submitButton.value = "valider";
+
+  inputTitle.onchange = (e) => {
+    console.log("title");
+    if (selectCategory.value && photo.files[0]) {
+      submitButton.className = "validerActive";
+    }
+  };
+  selectCategory.onchange = (e) => {
+    console.log("categories");
+    if (selectCategory.value && photo.files[0]) {
+      submitButton.className = "validerActive";
+    }
+  };
   modalWrapper.appendChild(modalHeader);
   modalWrapper.appendChild(modalTitle);
   modalWrapper.appendChild(modalContent);

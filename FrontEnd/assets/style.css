@@ -247,17 +247,17 @@ li:hover {
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
-/*input[type="submit"] {
+input[type="submit"] {
   font-family: "Syne";
   font-weight: 700;
   color: white;
-  /*background-color: #1d6154;
+  background-color: #1d6154;
   margin: 2em auto;
   width: 180px;
   height: 36px;
   text-align: center;
   border-radius: 60px;
-}*/
+}
 
 footer nav ul {
   display: flex;

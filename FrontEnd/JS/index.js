@@ -383,4 +383,4 @@ async function displayByCategory(categoryId) {
   });
 }
 createAllButtons();
-//displayByCategory();
+displayByCategory();

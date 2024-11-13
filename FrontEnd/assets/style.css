@@ -1,0 +1,635 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/** end reset css**/
+body {
+  max-width: 1140px;
+  margin: auto;
+  font-family: "Work Sans";
+  font-size: 14px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+section {
+  margin: 50px 0;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Syne";
+  font-size: 22px;
+  font-weight: 800;
+  color: #b1663c;
+}
+
+h1 > span {
+  font-family: "Work Sans";
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: 30px;
+  color: #1d6154;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+nav li {
+  padding: 0 10px;
+  font-size: 1.2em;
+}
+
+li:hover {
+  color: #b1663c;
+}
+#introduction {
+  display: flex;
+  align-items: center;
+}
+#introduction figure {
+  flex: 1;
+}
+#introduction img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+#introduction article {
+  flex: 1;
+}
+#introduction h2 {
+  margin-bottom: 1em;
+}
+
+#introduction p {
+  margin-bottom: 0.5em;
+}
+#portfolio h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+}
+#contact {
+  width: 50%;
+  margin: auto;
+}
+#contact > * {
+  text-align: center;
+}
+#contact h2 {
+  margin-bottom: 20px;
+}
+#contact form {
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact input {
+  height: 50px;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+  margin: 2em 0 1em 0;
+}
+#contact textarea {
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.formEnvoyer {
+  font-family: "Syne";
+  font-weight: 700;
+  color: white;
+  background-color: #1d6154;
+  margin: 2em auto;
+  width: 180px;
+  height: 36px;
+  text-align: center;
+  border-radius: 60px;
+}
+*/ footer nav ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2em;
+}
+
+.main-login {
+  min-height: 650px;
+  margin-top: 90px;
+}
+.main-login #contact form input[type="submit"] {
+  font-family: "Syne";
+  font-weight: 700;
+  color: white;
+  background-color: #1d6154;
+  margin: 2em auto;
+  width: 180px;
+  height: 36px;
+  text-align: center;
+  border-radius: 60px;
+}
+
+.form__lien {
+  color: black;
+  font-weight: 700;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.errorLogin {
+  color: #ff0000;
+}
+
+#login-link {
+  cursor: pointer;
+}
+
+/*Préparation des filtres*/
+
+#portfolio .container-filtres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: auto; /* Modifiez la hauteur selon vos besoins */
+  margin-bottom: 20px; /* Ajoutez un espacement en bas pour séparer les boutons de la galerie */
+}
+
+#portfolio .container-filtres .buttons-filtres {
+  background-color: #fefef8;
+  padding: 9px 20px;
+  border: 1px solid #1d6154;
+  border-radius: 25px;
+  color: #1d6154;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: Syne;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Ajoutez une transition pour une animation fluide */
+}
+
+#portfolio .container-filtres .buttons-filtres.active {
+  background-color: #1d6154;
+  color: white;
+}
+
+/* Modal */
+.topMenu {
+  background-color: #000000;
+  width: 100%;
+  margin: 0;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2em;
+  padding: 10px;
+  font-family: "Work Sans";
+  font-size: 16px;
+}
+.topMenu i,
+.editBtn i {
+  margin-right: 0.5em;
+}
+
+.topMenu button {
+  padding: 11px 23px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 60px;
+  width: auto;
+  margin: 0;
+  font-family: "Work Sans";
+}
+.editBtn {
+  padding: 15px 0;
+}
+.editBtn:hover {
+  cursor: pointer;
+}
+
+#introduction figure .editBtn {
+  margin-left: 4em;
+}
+
+#portfolio .editBtn {
+  position: relative;
+  bottom: 3.5em;
+  padding: 0;
+  left: 61%;
+}
+
+.topMenu {
+  background-color: #000000;
+  width: 100%;
+  margin: 0;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2em;
+  padding: 10px;
+  font-family: "Work Sans";
+  font-size: 16px;
+}
+.topMenu i,
+.editBtn i {
+  margin-right: 0.5em;
+}
+.addImagePreview {
+  height: 100%;
+}
+.topMenu button {
+  padding: 11px 23px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 60px;
+  width: auto;
+  margin: 0;
+  font-family: "Work Sans";
+}
+.editBtn {
+  padding: 15px 0;
+}
+.editBtn:hover {
+  cursor: pointer;
+}
+
+.displayNone {
+  display: none;
+}
+.displayBlock {
+  display: block;
+}
+#introduction figure .editBtn {
+  margin-left: 4em;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.modalGalleryImage {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.modalWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: calc(100vw - 20px);
+  max-height: calc(100vh - 50px);
+  width: 630px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin: auto;
+  overflow: auto;
+  z-index: 2;
+}
+.modalHeader {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#editGallery .modalHeader {
+  justify-content: flex-end;
+}
+.modal i {
+  display: block;
+  font-size: 1.5em;
+  border-bottom: 10px;
+}
+.modalTitle {
+  font-size: 26px;
+  margin-bottom: 47px;
+}
+.modalContent {
+  width: 70%;
+  border-bottom: 1px solid #b3b3b3;
+  padding-bottom: 47px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#addPictureBtn {
+  width: auto;
+  padding: 10px 49px;
+  margin-top: 50px;
+  border-radius: 60px;
+  background-color: #1d6154;
+  color: white;
+}
+#deleteGallery {
+  color: #d65353;
+}
+.miniWork figcaption {
+  font-size: 12px;
+}
+.miniWork {
+  position: relative;
+  width: 18%;
+}
+
+#fa-arrow-left {
+  display: flex;
+  position: relative;
+  right: 600px;
+}
+
+.miniWork i {
+  display: block;
+  box-sizing: border-box;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 0.7em;
+  padding: 4px 5px;
+  border-radius: 2px;
+  position: absolute;
+  top: 0.4em;
+  right: 0.4em;
+}
+#addPicture {
+  display: none;
+}
+#addPicture .modalHeader {
+  justify-content: space-between;
+}
+.valider {
+  background-color: #a7a7a7;
+  width: 37%;
+  font-family: "Syne";
+  font-weight: 700;
+  color: white;
+
+  margin: 2em auto;
+  width: 180px;
+  height: 36px;
+  text-align: center;
+  border-radius: 60px;
+}
+.validerActive {
+  background-color: #1d6154;
+  width: 37%;
+  font-family: "Syne";
+  font-weight: 700;
+  color: white;
+
+  margin: 2em auto;
+  width: 180px;
+  height: 36px;
+  text-align: center;
+  border-radius: 60px;
+}
+#addPictureForm {
+  display: flex;
+
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+#labelPhoto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  background-color: #e8f1f6;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+
+  position: relative;
+  box-sizing: border-box;
+}
+#labelPhoto p {
+  font-size: 10px;
+  font-weight: 400;
+}
+#picture {
+  margin: 25px 0;
+  width: 5.1em;
+}
+#picturePreview {
+  display: flex;
+  background-color: #e8f1f6;
+  height: 200px;
+  width: 100%;
+  justify-content: center;
+}
+#picturePreview img {
+  height: 100%;
+  width: 31%;
+  object-fit: cover;
+}
+
+.browsePictures {
+  color: #306685;
+  background-color: #cbd6dc;
+  border: none;
+  padding: 10px 33px;
+  margin-bottom: 10px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50px;
+}
+#title {
+  margin-bottom: 11px;
+  height: 51px;
+  border: none;
+  box-shadow: 0px 4px 14px 0px #00000017;
+}
+select {
+  appearance: none;
+  -moz-appearance: none;
+  background-image: url(./icons/chevron-down.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-origin: content-box;
+  padding-right: 20px;
+  background-color: #ffffff;
+  height: 51px;
+  box-shadow: 0px 4px 14px 0px #00000017;
+  border: none;
+}
+option {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+#photo {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
